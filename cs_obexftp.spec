@@ -21,9 +21,8 @@ a nice GUI able to transfer file between two devices.
 %setup -q -n %name-%version
 
 %build
-#%configure2_5xi
 ./configure --prefix=%_prefix --bindir=%_bindir --datadir=%_datadir --libdir=%_libdir
-%make -j1
+%make
 
 %install
 rm -fr %buildroot
