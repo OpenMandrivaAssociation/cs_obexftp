@@ -1,5 +1,5 @@
 %define name cs_obexftp
-%define version 1.0.0.13
+%define version 1.0.0.14
 %define release %mkrel 1
 
 Summary: ObexFtp files transfert between two devices
@@ -16,6 +16,14 @@ BuildRequires: obexftp-devel
 %description
 Using the new CSharp Dll from swig portability of Openobex/ObexFtp to write
 a nice GUI able to transfer file between two devices.
+
+%package devel
+Summary: Development files for CSharp ObexFtp
+Group: Development/Other
+Requires: %name = %version
+
+%description devel
+This package contains development files for CSharp ObexFtp.
 
 %prep
 %setup -q -n %name-%version
@@ -35,5 +43,11 @@ rm -fr %buildroot
 %defattr(-,root,root)
 %_bindir/cs-obexftp
 %_libdir/cs_obexftp
-%_iconsdir/*.png
-%_datadir/applications/*.desktop
+%{_bindir}/bluetooth
+
+%files devel
+%defattr(-,root,root)
+%{_libdir}/pkgconfig/alldll.pc
+%{_libdir}/pkgconfig/bluetoothwrapper.pc
+%{_libdir}/pkgconfig/cobexftplib.pc
+
