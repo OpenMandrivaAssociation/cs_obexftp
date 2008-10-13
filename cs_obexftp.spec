@@ -1,18 +1,19 @@
 %define name cs_obexftp
 %define version 1.0.0.18
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: ObexFtp files transfert between two devices
 Name: %{name}
 Version: %{version}
 Release: %{release}
-License: GPL+
+License: GPLv2+
 Group: Communications
 URL: http://cs-obexftp.wiki.sourceforge.net/
 Source0: http://kent.dl.sourceforge.net/sourceforge/cs-obexftp/%name-%version.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: mono-devel
+BuildRequires: mono-devel >= 2.0
 BuildRequires: obexftp-devel
+Requires: obexftp
 BuildArch: noarch
 
 %description
@@ -35,6 +36,7 @@ rm -fr %buildroot
 
 %files
 %defattr(-,root,root)
+%doc Cs-ObexFtp/ChangeLog THANKS todos
 %_bindir/*
 %_prefix/lib/csobexftp
 %_prefix/lib/pkgconfig/*.pc
