@@ -10,6 +10,7 @@ License: GPL+
 Group: Communications
 URL: http://cs-obexftp.wiki.sourceforge.net/
 Source0: http://kent.dl.sourceforge.net/sourceforge/cs-obexftp/%name-%version.tar.bz2
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: mono-devel
 BuildRequires: obexftp-devel
 BuildArch: noarch
