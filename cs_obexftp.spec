@@ -1,6 +1,7 @@
 %define name cs_obexftp
-%define version 1.0.0.18
-%define release %mkrel 2
+%define version 1.0.1.19
+%define svnrel 293
+%define release %mkrel -c r%{svnrel} 1
 
 Summary: ObexFtp files transfert between two devices
 Name: %{name}
@@ -12,8 +13,8 @@ URL: http://cs-obexftp.wiki.sourceforge.net/
 Source0: http://kent.dl.sourceforge.net/sourceforge/cs-obexftp/%name-%version.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: mono-devel >= 2.0
-BuildRequires: obexftp-devel
-Requires: obexftp
+BuildRequires: obexftp-devel >= 0.2.3
+Requires: obexftp >= 0.2.3
 BuildArch: noarch
 
 %description
