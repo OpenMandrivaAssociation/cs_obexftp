@@ -1,7 +1,7 @@
 %define name cs_obexftp
 %define version 1.0.1.19
 %define svnrel 293
-%define release %mkrel -c r%{svnrel} 1
+%define release %mkrel -c r%{svnrel} 2
 
 Summary: ObexFtp files transfert between two devices
 Name: %{name}
