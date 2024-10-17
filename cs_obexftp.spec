@@ -8,7 +8,7 @@ Version: %{version}
 Release: %{release}
 License: GPLv2+
 Group: Communications
-URL: http://cs-obexftp.wiki.sourceforge.net/
+URL: https://cs-obexftp.wiki.sourceforge.net/
 Source0: http://kent.dl.sourceforge.net/sourceforge/cs-obexftp/%name-%version.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: mono-devel >= 2.0
