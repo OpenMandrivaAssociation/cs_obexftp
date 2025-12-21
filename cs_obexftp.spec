@@ -11,6 +11,11 @@ Group: Communications
 URL: https://cs-obexftp.wiki.sourceforge.net/
 Source0: http://kent.dl.sourceforge.net/sourceforge/cs-obexftp/%name-%version.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: mono-devel >= 2.0
 BuildRequires: obexftp-devel
 Requires: obexftp
